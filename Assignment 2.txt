@@ -1,0 +1,26 @@
+﻿function wordCount(inputString){
+
+	var splitString = inputString.split(" ");
+
+	var result = [];
+
+
+	splitString.forEach((word)=>{
+
+		var obj={}
+;  
+		var count=inputString.match(new RegExp(word, "g")).length;
+  
+		obj[word]=count;
+  
+		result.push(obj);
+
+	})
+
+	console.log(result);
+	
+
+}
+
+
+wordCount("Walmart Technology is reinventing the way the world shops and we’ve only just begun. Our team includes @Walmart Labs in Silicon Valley and Bengaluru, which powers the eCommerce experience, as well as technology teams across data and analytics, retail, back office and more who help power store and digital experiences.");

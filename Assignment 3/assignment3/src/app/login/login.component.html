@@ -1,0 +1,25 @@
+<div class="container" >
+  <div class="top">
+    <div class="title">
+      Welcome
+    </div>
+  </div>
+  <form name="form1">
+  <div class="panel-body">
+    <div class="row">
+      <div class="input-field">
+        <input id="email" type="email" class="validate" placeholder="Username" required>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field">
+        <input  id="password" type="password" name="text1" class="validate" placeholder="Password" required pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="Must contain at least one uppercase and lowercase letter, and at least 8 or more characters">
+      </div>
+    </div>
+
+    <button class="btn" type="submit"  name="action" (click)="valid()">Login</button>
+
+  </div>
+  </form>
+</div>

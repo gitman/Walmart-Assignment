@@ -1,0 +1,19 @@
+<div class = "main">
+  <div class="top">
+
+    <div class="title"> <a class="back" style="float: left" href="/"> <img src="assets/back-arrow1.png"> </a>List View</div>
+  </div>
+  <div class = "addexample">
+    <input [(ngModel)] = "newItem" placeholder = "Add New Example" class = "addNumber">
+    <button (click)="pushItem()">Save</button>
+  </div>
+  <ul>
+    <li *ngFor="let i of items; let ind = index">
+      <div (swipeleft)="swipe()" (swiperight)="swipe1()">
+      <span class="image" ><img src="/assets/images.png"></span>
+      <span class="details" >{{i}}</span>
+      <span class="remove"  (click)="removeItem(ind)">{{msg}}</span>
+      </div>
+    </li>
+  </ul>
+</div>
